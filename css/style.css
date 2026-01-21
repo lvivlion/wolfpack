@@ -7,6 +7,7 @@
     --color-gray: #888888;
     --color-accent: #c9a227;
     --font-primary: 'Montserrat', sans-serif;
+    --font-elegant: 'Playfair Display', serif;
     --nav-height: 140px;
     --transition-fast: 0.3s ease;
     --transition-medium: 0.5s ease;
@@ -55,8 +56,54 @@ ul {
 }
 
 .navbar {
-    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 50%, #000000 100%);
-    border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+    position: relative;
+    overflow: hidden;
+    background:
+        /* Main luxury gradient - smooth dark layers */
+        linear-gradient(180deg,
+            #2a2a2a 0%,
+            #1a1a1a 20%,
+            #0f0f0f 60%,
+            #080808 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.6),
+        0 2px 8px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Animated flowing light effect */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.03) 25%,
+            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.03) 75%,
+            transparent 100%);
+    animation: flowingLight 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes flowingLight {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 .nav-container {
