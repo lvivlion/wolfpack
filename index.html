@@ -30,15 +30,15 @@
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
-
-                <!-- Navigation Links -->
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="#founder" class="nav-link">Contact</a></li>
-                </ul>
             </div>
+        </nav>
+        <!-- Navigation Links moved here to avoid container clipping -->
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#founder" class="nav-link">Contact</a></li>
+        </ul>
         </nav>
     </header>
 
@@ -139,43 +139,25 @@
             </div>
 
             <div class="gallery-grid">
+                <div class="gallery-item gallery-item--video" data-type="video" data-src="img/gallary/IMG_4779.mp4">
+                    <video muted loop autoplay playsinline preload="metadata">
+                        <source src="img/gallary/IMG_4779.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div class="gallery-item" data-type="image" data-src="img/gallary/IMG_3393.jpg">
                     <img src="img/gallary/IMG_3393.jpg" alt="Wolfpack Provisions Food 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon">🔍</span>
-                    </div>
                 </div>
                 <div class="gallery-item" data-type="image" data-src="img/gallary/IMG_3444.jpg">
                     <img src="img/gallary/IMG_3444.jpg" alt="Wolfpack Provisions Food 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon">🔍</span>
-                    </div>
                 </div>
                 <div class="gallery-item" data-type="image" data-src="img/gallary/IMG_4420.jpg">
                     <img src="img/gallary/IMG_4420.jpg" alt="Wolfpack Provisions Food 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon">🔍</span>
-                    </div>
-                </div>
-                <div class="gallery-item gallery-item--video" data-type="video" data-src="img/gallary/IMG_4779.mp4">
-                    <video muted loop preload="metadata">
-                        <source src="img/gallary/IMG_4779.mp4" type="video/mp4">
-                    </video>
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon gallery-icon--play">▶</span>
-                    </div>
                 </div>
                 <div class="gallery-item" data-type="image" data-src="img/gallary/IMG_4783.jpg">
                     <img src="img/gallary/IMG_4783.jpg" alt="Wolfpack Provisions Food 4" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon">🔍</span>
-                    </div>
                 </div>
                 <div class="gallery-item" data-type="image" data-src="img/gallary/IMG_5748.jpg">
                     <img src="img/gallary/IMG_5748.jpg" alt="Wolfpack Provisions Food 5" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-icon">🔍</span>
-                    </div>
                 </div>
             </div>
         </div>
