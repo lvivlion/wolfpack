@@ -58,6 +58,13 @@ ul {
 
 .navbar {
     position: relative;
+    /* Removed overflow: hidden to allow mobile menu to overflow */
+}
+
+.navbar-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     overflow: hidden;
     background:
         /* Main luxury gradient - smooth dark layers */
@@ -76,7 +83,7 @@ ul {
 }
 
 /* Animated flowing light effect */
-.navbar::before {
+.navbar-bg::before {
     content: '';
     position: absolute;
     top: 0;
@@ -115,6 +122,8 @@ ul {
     margin: 0 auto;
     padding: 0 2rem;
     height: var(--nav-height);
+    position: relative;
+    z-index: 1;
 }
 
 /* Logo */
