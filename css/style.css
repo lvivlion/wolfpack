@@ -6,8 +6,8 @@
     --color-white: #ffffff;
     --color-gray: #888888;
     --color-accent: #c9a227;
-    --font-primary: 'Montserrat', sans-serif;
-    --font-elegant: 'Playfair Display', serif;
+    --font-primary: 'Barlow', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
     --nav-height: 140px;
     --transition-fast: 0.3s ease;
     --transition-medium: 0.5s ease;
@@ -260,6 +260,7 @@ ul {
 }
 
 .coming-soon-title {
+    font-family: var(--font-heading);
     font-size: clamp(3rem, 10vw, 6rem);
     font-weight: 700;
     text-transform: uppercase;
@@ -299,6 +300,7 @@ ul {
 }
 
 .coming-soon-tagline {
+    font-family: var(--font-heading);
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -336,7 +338,9 @@ ul {
 }
 
 .section-title {
-    font-family: var(--font-elegant);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -402,7 +406,7 @@ ul {
 }
 
 .goal-title {
-    font-family: var(--font-elegant);
+    font-family: var(--font-heading);
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--color-white);
@@ -419,9 +423,12 @@ ul {
 
 .section-tagline {
     text-align: center;
-    font-family: var(--font-elegant);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: normal;
     font-size: 1.3rem;
-    font-style: italic;
     color: var(--color-accent);
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -466,7 +473,9 @@ ul {
 }
 
 .founder-name {
-    font-family: var(--font-elegant);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: 600;
     color: var(--color-white);
@@ -524,9 +533,12 @@ ul {
 }
 
 .founder-quote p {
-    font-family: var(--font-elegant);
+    font-family: var(--font-heading);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-style: normal;
     font-size: 1.2rem;
-    font-style: italic;
     color: var(--color-white);
     margin-bottom: 0;
 }
