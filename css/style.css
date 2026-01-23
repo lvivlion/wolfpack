@@ -430,8 +430,9 @@ ul {
     font-style: normal;
     font-size: 1.3rem;
     color: var(--color-accent);
-    padding-top: 2rem;
+    padding: 3rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
