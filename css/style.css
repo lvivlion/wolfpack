@@ -880,6 +880,7 @@ ul {
         aspect-ratio: 16/10;
     }
 }
+
 /* ============================================
    Footer Section
    ============================================ */
@@ -910,7 +911,14 @@ ul {
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.web-design-link {
+    font-size: 0.75rem;
+    opacity: 0.8;
 }
 
 .social-link {
