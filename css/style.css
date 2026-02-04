@@ -1271,4 +1271,16 @@ ul {
         width: 35px;
         height: 35px;
     }
+
+    .goal-card {
+        padding: 1.5rem !important;
+    }
+
+    .founder-bio {
+        padding: 1.5rem !important;
+    }
+
+    .founder-quote {
+        padding: 1rem !important;
+    }
 }
