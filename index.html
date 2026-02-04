@@ -246,20 +246,21 @@
 
 
                     <div class="form-group">
+                        <label for="popup-name">Full Name</label>
+                        <input type="text" id="popup-name" name="entry.1413491778" placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
                         <label for="popup-email">Email Address</label>
                         <input type="email" id="popup-email" name="entry.2001082181" placeholder="Enter your email"
                             required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="popup-phone">Phone Number</label>
-                        <input type="tel" id="popup-phone" name="entry.1413491778" placeholder="Enter your phone number"
-                            required>
-                    </div>
-
                     <!-- Honeypot field (hidden from users) -->
+                    <!-- entry.646170703 is the 'Address' field in Google Form -->
                     <div class="form-group" style="display: none;">
-                        <input type="text" name="entry.646170703" tabindex="-1" autocomplete="off">
+                        <input type="text" name="entry.646170703" tabindex="-1" autocomplete="off" value="">
                     </div>
 
                     <button type="submit" class="popup-submit">Get My 10% Off</button>

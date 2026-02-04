@@ -1015,13 +1015,14 @@ ul {
     background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
     border: 1px solid rgba(201, 162, 39, 0.3);
     border-radius: 24px;
-    width: 90%;
+    width: 95%;
     max-width: 500px;
     padding: 3rem;
     position: relative;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(201, 162, 39, 0.1);
     transform: translateY(20px);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-sizing: border-box;
 }
 
 .popup-overlay.active .popup-content {
@@ -1165,10 +1166,15 @@ ul {
     }
 
     .popup-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .popup-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .popup-close {
+        top: 10px;
+        right: 15px;
     }
 }
