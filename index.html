@@ -124,6 +124,20 @@
                         <p>"Wolfpack Provisions was built to reflect that belief—real food, made with intention,
                             designed to fuel people who want more out of their health and their lives."</p>
                     </div>
+
+                    <div class="founder-contact">
+                        <a href="mailto:Wolfpackprovisions@outlook.com" class="email-link">
+                            <svg class="email-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Wolfpackprovisions@outlook.com
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,6 +209,16 @@
                         </svg>
                         Follow us on Instagram
                     </a>
+                    <a href="mailto:Wolfpackprovisions@outlook.com" class="social-link">
+                        <svg class="email-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Wolfpackprovisions@outlook.com
+                    </a>
                     <a href="https://ost4p.com/website" class="social-link web-design-link" target="_blank"
                         rel="noopener noreferrer">
                         WebDesign by OL Web Services
@@ -203,6 +227,52 @@
             </div>
         </div>
     </footer>
+
+    <!-- Signup Popup Modal -->
+    <div class="popup-overlay" id="signup-popup">
+        <div class="popup-content">
+            <button class="popup-close" id="popup-close" aria-label="Close popup">&times;</button>
+            <div class="popup-inner">
+                <div class="popup-header">
+                    <h2 class="popup-title">Join the Pack</h2>
+                    <p class="popup-subtitle">Sign up now and get <span class="accent-text">10% OFF</span> your first
+                        order!</p>
+                </div>
+
+                <form id="signup-form" class="signup-form">
+                    <!-- Google Form Entry IDs -->
+                    <!-- Email: entry.2001082181 -->
+                    <!-- Phone (mapped to Full Name): entry.1413491778 -->
+
+
+                    <div class="form-group">
+                        <label for="popup-email">Email Address</label>
+                        <input type="email" id="popup-email" name="entry.2001082181" placeholder="Enter your email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="popup-phone">Phone Number</label>
+                        <input type="tel" id="popup-phone" name="entry.1413491778" placeholder="Enter your phone number"
+                            required>
+                    </div>
+
+                    <!-- Honeypot field (hidden from users) -->
+                    <div class="form-group" style="display: none;">
+                        <input type="text" name="entry.646170703" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button type="submit" class="popup-submit">Get My 10% Off</button>
+                </form>
+
+                <div id="popup-success" class="popup-success" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Welcome to the Pack!</h3>
+                    <p>Check your email soon for your 10% discount code.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

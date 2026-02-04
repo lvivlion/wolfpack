@@ -186,5 +186,81 @@ document.addEventListener('DOMContentLoaded', () => {
                 navigateLightbox(-1);
             }
         }
-    }
-});
+        // ============================================
+        // Signup Popup Functionality
+        // ============================================
+        const signupPopup = document.getElementById('signup-popup');
+        const popupClose = document.getElementById('popup-close');
+        const signupForm = document.getElementById('signup-form');
+        const popupSuccess = document.getElementById('popup-success');
+        const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfE9IH7XTbAzSO3vDvcAClwBsQtLGC53ARr3RdY4VgVDjaQng/formResponse';
+
+        // Show popup after 5 seconds
+        const showPopupTimer = setTimeout(() => {
+            // Only show if user hasn't already closed or submitted in this session
+            if (!sessionStorage.getItem('wolfpack_popup_closed')) {
+                signupPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }, 5000);
+
+        const closePopup = () => {
+            signupPopup.classList.remove('active');
+            document.body.style.overflow = '';
+            sessionStorage.setItem('wolfpack_popup_closed', 'true');
+        };
+
+        if (popupClose) {
+            popupClose.addEventListener('click', closePopup);
+        }
+
+        if (signupPopup) {
+            signupPopup.addEventListener('click', (e) => {
+                if (e.target === signupPopup) {
+                    closePopup();
+                }
+            });
+        }
+
+        if (signupForm) {
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(signupForm);
+
+                // Honeypot check (entry.646170703)
+                const honeypot = formData.get('entry.646170703');
+                if (honeypot) {
+                    console.warn('Spam detected');
+                    return;
+                }
+
+                const submitButton = signupForm.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+
+                // Background submission
+                fetch(formUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                })
+                    .then(() => {
+                        // Since it's no-cors, we won't see the response content, 
+                        // but if it doesn't throw, it likely went through.
+                        signupForm.style.display = 'none';
+                        popupSuccess.style.display = 'block';
+                        sessionStorage.setItem('wolfpack_popup_closed', 'true');
+
+                        // Close popup after 3 seconds of showing success
+                        setTimeout(closePopup, 3000);
+                    })
+                    .catch((error) => {
+                        console.error('Submission error:', error);
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Get My 10% Off';
+                        alert('There was an error. Please try again or contact us directly.');
+                    });
+            });
+        }
+    });
