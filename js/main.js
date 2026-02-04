@@ -199,15 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show popup after 5 seconds
     const showPopupTimer = setTimeout(() => {
-        // For testing, always show. User can close it.
-        signupPopup.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        // Only show if user hasn't already closed or submitted in this session
+        if (!sessionStorage.getItem('wolfpack_popup_closed')) {
+            signupPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     }, 5000);
 
     const closePopup = () => {
         signupPopup.classList.remove('active');
         document.body.style.overflow = '';
-        // sessionStorage.setItem('wolfpack_popup_closed', 'true'); // Temporarily disabled for testing
+        sessionStorage.setItem('wolfpack_popup_closed', 'true');
     };
 
     if (popupClose) {
