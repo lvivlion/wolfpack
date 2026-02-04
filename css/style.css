@@ -23,6 +23,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -59,7 +60,7 @@ ul {
 
 .navbar {
     position: relative;
-    /* Removed overflow: hidden to allow mobile menu to overflow */
+    overflow: hidden;
 }
 
 .navbar-bg {
@@ -327,6 +328,7 @@ ul {
     padding: 6rem 2rem;
     background: linear-gradient(180deg, #0a0a0a 0%, #151515 50%, #0a0a0a 100%);
     position: relative;
+    overflow: hidden;
 }
 
 .about-section::before {
@@ -454,6 +456,7 @@ ul {
     padding: 6rem 2rem;
     background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
     position: relative;
+    overflow: hidden;
 }
 
 .founder-section::before {
@@ -907,6 +910,7 @@ ul {
     background-color: var(--color-black);
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
 }
 
 .footer-container {
@@ -950,6 +954,9 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     transition: color var(--transition-fast), transform var(--transition-fast);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .instagram-icon {
@@ -1242,6 +1249,11 @@ ul {
         display: flex;
         justify-content: center;
         box-sizing: border-box;
+    }
+
+    .social-link {
+        font-size: 0.75rem !important;
+        letter-spacing: 1px !important;
     }
 
     .popup-content {
