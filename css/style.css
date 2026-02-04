@@ -664,6 +664,17 @@ ul {
     .founder-quote p {
         font-size: 1.1rem;
     }
+
+    .section-title {
+        font-size: 2rem;
+        word-wrap: break-word;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
@@ -672,11 +683,16 @@ ul {
     }
 
     .logo img {
-        height: 60px;
+        height: 50px;
     }
 
     .coming-soon-subtitle {
         padding: 0 1rem;
+    }
+
+    .coming-soon-title {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
     }
 }
 
@@ -1206,24 +1222,36 @@ ul {
 /* Specific fixes for ultra-small devices (320px - 380px) */
 @media (max-width: 380px) {
     .coming-soon-title {
-        font-size: 2.2rem !important;
+        font-size: 2rem !important;
         letter-spacing: 2px !important;
     }
 
     .section-title {
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
+    }
+
+    .section-description {
+        font-size: 0.9rem !important;
     }
 
     .email-link {
-        font-size: 0.8rem !important;
-        padding: 0.8rem 1.25rem !important;
+        font-size: 0.75rem !important;
+        padding: 0.8rem 1rem !important;
         letter-spacing: 1px !important;
         width: 100%;
+        display: flex;
         justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .popup-content {
+        padding: 2rem 1rem !important;
+        width: 95% !important;
+        margin: 0 auto !important;
     }
 
     .popup-title {
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
         letter-spacing: 1px !important;
     }
 
@@ -1232,10 +1260,15 @@ ul {
     }
 
     .logo img {
-        height: 50px !important;
+        height: 45px !important;
     }
 
     .nav-container {
-        padding: 0 1.25rem !important;
+        padding: 0 0.75rem !important;
+    }
+
+    .hamburger {
+        width: 35px;
+        height: 35px;
     }
 }
