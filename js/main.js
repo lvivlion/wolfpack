@@ -265,4 +265,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
+    // ============================================
+    // Floating Order Button Visibility
+    // ============================================
+    const floatingOrderBtn = document.getElementById('floating-order-btn');
+
+    if (floatingOrderBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                floatingOrderBtn.classList.add('visible');
+            } else {
+                floatingOrderBtn.classList.remove('visible');
+            }
+        });
+    }
 });
