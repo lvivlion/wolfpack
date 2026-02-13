@@ -254,8 +254,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     popupSuccess.style.display = 'block';
                     sessionStorage.setItem('wolfpack_popup_closed', 'true');
 
-                    // Close popup after 3 seconds of showing success
-                    setTimeout(closePopup, 3000);
+                    // Add copy functionality
+                    const copyBtn = document.getElementById('copy-btn');
+                    const promoCode = document.getElementById('promo-code');
+
+                    if (copyBtn && promoCode) {
+                        copyBtn.addEventListener('click', () => {
+                            const codeText = promoCode.textContent;
+                            navigator.clipboard.writeText(codeText).then(() => {
+                                const originalContent = copyBtn.innerHTML;
+                                copyBtn.classList.add('copied');
+                                copyBtn.innerHTML = `
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Copied!
+                                `;
+
+                                setTimeout(() => {
+                                    copyBtn.classList.remove('copied');
+                                    copyBtn.innerHTML = originalContent;
+                                }, 2000);
+                            });
+                        });
+                    }
+
+                    // Close popup after 10 seconds of showing success (extended to give time for copying)
+                    setTimeout(closePopup, 10000);
                 })
                 .catch((error) => {
                     console.error('Submission error:', error);

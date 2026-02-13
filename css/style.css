@@ -2029,6 +2029,62 @@ a.location-address:hover {
 
 .popup-success p {
     color: var(--color-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.discount-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.discount-code {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: rgba(201, 162, 39, 0.1);
+    border: 2px dashed rgba(201, 162, 39, 0.4);
+    color: var(--color-accent);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    border-radius: 12px;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.copy-btn.copied {
+    background: var(--color-accent);
+    color: var(--color-black);
+    border-color: var(--color-accent);
+}
+
+.copy-btn svg {
+    flex-shrink: 0;
 }
 
 @media (max-width: 480px) {
